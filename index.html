@@ -11,9 +11,14 @@
 </head>
 <body>
     <div id="app" class="container">
-        <div v-for="email in emailList" class="email">
-            
+        <div class="titolo">
+            <h1>TUTTE LE 10 EMAIL GENERATE:</h1>
         </div>
+        <ol v-if="emailList.length === 10">
+            <li v-for="email, i in emailList" :key="i">
+                {{ email }}
+            </li>
+        </ol>
     </div>
 
 
